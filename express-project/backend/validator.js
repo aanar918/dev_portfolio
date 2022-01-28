@@ -1,6 +1,6 @@
 const emailTemplate = /^(([^<>()[\]\.,;:\s@\"\']+(\.[^<>()[\]\.,;:\s@\"\']+)*))@(([^<>()[\]\.,;:\s@\"\']+\.)+[^<>()[\]\.,;:\s@\"\']{2,3})$/i;
 const numberTemplate = /^[^s\^\?]([0-9]{1,3})|[7-9]\d{7}$/;
-const passwordTemplate = /^[^<>()[\]\.,;:\s@\"\']$/
+const passwordTemplate = /^[^<>()[\]\.,;:\s@\"\'\s]{6,12}$/
 
 const validateEmail = (email) => {
   return email.match(emailTemplate);
@@ -16,5 +16,5 @@ const validatePassword = (pass) => {
 
 console.log(validateEmail("test.hhh@test.com"));
 console.log(validateNumber("+97688112233"));
-console.log(validatePassword("+97688112233"));
+console.log(validatePassword("ahlkdh3894"));
 
